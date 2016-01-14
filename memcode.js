@@ -1,9 +1,9 @@
 /*
 	use:
 	infrajs.code_save('popup','contacts.show();');
-	infra.wait(infrajs.layer,'onhide',function(){
+	Event.one('layer.onhide', function () {
 		infrajs.code_remove('popup');
-	});
+	}, '', layer);
 */
 infrajs.code_types={};
 infrajs.code_types_save=function(){
