@@ -38,13 +38,19 @@ infrajs.code_save=function(type,code){
 	window.sessionStorage.setItem('savedcode'+type,code);
 }
 infrajs.code_restore=function(){
-	if(!window.sessionStorage)return;
+	if (!window.sessionStorage) return;
 	var types=window.sessionStorage.getItem('savedtypescode');
 	if(!types)return;
 	types=types.split('|');
 	for(var i=0,l=types.length;i<l;i++){
 		var type=types[i];
 		var code=window.sessionStorage.getItem('savedcode'+type);
-		if(code)eval(code);
+		if (code) {
+			try {
+				eval(code);
+			} catch (e) {
+				console.error('memcode error',code);
+			}
+		}
 	}
 };
