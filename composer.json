@@ -1,5 +1,6 @@
 {
 	"name": "infrajs/memcode",
+	"homepage":"https://github.com/infrajs/memcode",
 	"license": "GPL3",
 	"autoload": {
 		"psr-4": { "infrajs\\memcode\\": "/" }
