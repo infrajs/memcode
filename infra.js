@@ -1,5 +1,5 @@
 
-Event.one('Infrajs.onshow', function () {
+Event.one('Controller.onshow', function () {
 	//code
 	infrajs.code_restore();
 }, 'code');

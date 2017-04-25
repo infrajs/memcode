@@ -1,7 +1,7 @@
 /*
 	use:
 	infrajs.code_save('popup','contacts.show();');
-	Event.one('layer.onhide', function () {
+	Event.one('Layer.onhide', function () {
 		infrajs.code_remove('popup');
 	}, '', layer);
 */
