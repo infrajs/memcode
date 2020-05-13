@@ -1,7 +1,8 @@
 import { Controller } from '/vendor/infrajs/controller/src/Controller.js'
 import { Event } from '/vendor/infrajs/event/Event.js'
+import { DOM } from '/vendor/akiyatkin/load/DOM.js'
 
-Event.one('Controller.onshow', function () {
+DOM.wait('show').then(() => {
 	//code
 	if (!window.sessionStorage) return;
 	var types = window.sessionStorage.getItem('savedtypescode');
@@ -18,4 +19,4 @@ Event.one('Controller.onshow', function () {
 			}
 		}
 	}
-}, 'code');
+})
