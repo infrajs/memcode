@@ -1,12 +1,9 @@
 import { Controller } from '/vendor/infrajs/controller/src/Controller.js'
 import { Event } from '/vendor/infrajs/event/Event.js'
-import { DOM } from '/vendor/akiyatkin/load/DOM.js'
 
-DOM.wait('load').then(() => {
-	//code
-	if (!window.sessionStorage) return;
-	var types = window.sessionStorage.getItem('savedtypescode');
-	if (!types) return;
+
+var types = window.sessionStorage.getItem('savedtypescode');
+if (types) {
 	types = types.split('|');
 	for (var i = 0, l = types.length; i < l; i++) {
 		var type = types[i];
@@ -19,4 +16,4 @@ DOM.wait('load').then(() => {
 			}
 		}
 	}
-})
+}
