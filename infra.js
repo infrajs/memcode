@@ -1,6 +1,3 @@
-import { Controller } from '/vendor/infrajs/controller/src/Controller.js'
-import { Event } from '/vendor/infrajs/event/Event.js'
-
 
 var types = window.sessionStorage.getItem('savedtypescode');
 if (types) {
