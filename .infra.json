@@ -1,4 +1,3 @@
 {
-	"dependencies":"event",
-	"js":["infra.js"]
+	"dependencies":"event"
 }
